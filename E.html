@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Commerce Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <span class="logo">Ecommerce</span>
+      <nav>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+      <input type="text" id="search" placeholder="Search..." />
+      <span class="admin">Admin ▼</span>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <div class="sidebar-section">
+        <h3>By Category</h3>
+        <ul id="category-list">
+          <li data-category="all" class="active">All</li>
+          <li data-category="laptops">Laptops</li>
+          <li data-category="desktops">Desktops</li>
+          <li data-category="phones">Phones</li>
+          <li data-category="tablets">Tablets</li>
+          <li data-category="tv">TVs</li>
+          <li data-category="cameras">Cameras</li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>By Tag</h3>
+        <ul>
+          <li>Tag 1</li>
+          <li>Tag 2</li>
+          <li>Tag 3</li>
+        </ul>
+      </div>
+    </aside>
+    <section class="products-section">
+      <div class="products-header">
+        <h2>Featured</h2>
+        <div class="sort">
+          Price: 
+          <button id="sort-low-high">Low to High</button> | 
+          <button id="sort-high-low">High to Low</button>
+        </div>
+      </div>
+      <div id="products" class="products-grid"></div>
+    </section>
+    <aside class="cart-section" id="cart-section" style="display:none;">
+      <h3>Shopping Cart</h3>
+      <ul id="cart-items"></ul>
+      <div id="cart-total"></div>
+      <button id="checkout-btn">Checkout</button>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
